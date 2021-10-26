@@ -1,1 +1,1 @@
-# linear-slider-component
+# linear-slider
