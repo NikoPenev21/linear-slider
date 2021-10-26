@@ -1,0 +1,104 @@
+body {
+  margin: 0 !important;
+}
+
+.wrapper {
+  margin: 0 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.outer-wrapper {
+  display: flex;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+}
+
+.line {
+  position: absolute;
+  z-index: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #c6aee7;
+}
+
+.progressLine {
+  position: relative;
+  z-index: 1;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #6200ee;
+}
+
+.circle {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #6200ee;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 2;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.circle #currentValue {
+  position: absolute;
+  top: 30px;
+  /* visibility: hidden; */
+  opacity: 0;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  z-index: 1;
+}
+
+.circle #currentValue::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.circle:hover #currentValue, .circle:active #currentValue {
+  /* position: relative;
+  top: 25px; */
+  /* visibility: visible; */
+  opacity: 1 !important;
+}
+
+.circle:hover {
+  box-shadow: 0 0 0 9px rgba(98, 0, 238, 0.06);
+}
+
+.circle:focus {
+  box-shadow: 0 0 0 9px rgba(98, 0, 238, 0.11);
+  outline: none;
+}
+
+#minValue, #maxValue {
+  display: block;
+  margin: 5px 10px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}

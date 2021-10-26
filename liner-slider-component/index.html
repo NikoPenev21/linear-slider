@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Linear Slider Component</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="prefetch" href="material-slider.css">
+</head>
+
+<body>
+    <material-slider width="320" value="50" min="0" max="100" step="10">
+    </material-slider>
+
+    <template id="material-slider-template">
+        <link rel="stylesheet" href="material-slider.css">
+        <div class="outer-wrapper">
+            <div id="minValue"></div>
+            <div class="wrapper" id="wrapper">
+                <div class="progressLine" id="progressLine"></div>
+                <div class="line" id="line"></div>
+                <div class="circle" id="circle" draggable="false" tabindex=0>
+                    <div id="currentValue"></div>
+                </div>
+            </div>
+            <div id="maxValue"></div>
+        </div>
+    </template>
+</body>
+
+</html>
